@@ -1,65 +1,87 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { theme } from '../theme';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'contained' | 'outlined';
-  size?: 'small' | 'medium' | 'large';
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
   onClick?: () => void;
 }
 
 export const Button: React.FC<ButtonProps> = ({ 
   children, 
-  variant = 'contained', 
-  size = 'medium',
+  variant = 'primary', 
+  size = 'md',
   onClick 
 }) => {
   const baseStyles = css`
     border: none;
-    border-radius: 6px;
+    border-radius: var(--radius);
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
     font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     
     &:hover {
       transform: translateY(-1px);
     }
+    
+    &:active {
+      transform: translateY(0);
+    }
   `;
 
   const sizeStyles = {
-    small: css`
-      padding: 8px 16px;
-      font-size: 14px;
+    sm: css`
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      height: 2rem;
     `,
-    medium: css`
-      padding: 12px 24px;
-      font-size: 16px;
+    md: css`
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      height: 2.5rem;
     `,
-    large: css`
-      padding: 16px 32px;
-      font-size: 18px;
+    lg: css`
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+      height: 3rem;
     `,
   };
 
   const variantStyles = {
-    contained: css`
-      background: ${theme.roles.notice.outline};
-      color: ${theme.palette.text.primary};
+    primary: css`
+      background-color: hsl(var(--content-primary));
+      color: hsl(var(--content-invert));
+      border: 1px solid hsl(var(--content-primary));
       
       &:hover {
-        background: ${theme.roles.notice.outline}dd;
+        background-color: hsl(var(--content-secondary));
+        border-color: hsl(var(--content-secondary));
       }
     `,
-    outlined: css`
-      background: transparent;
-      border: 2px solid ${theme.roles.notice.outline};
-      color: ${theme.roles.notice.outline};
+    secondary: css`
+      background-color: hsl(var(--surface-tertiary));
+      color: hsl(var(--content-primary));
+      border: 1px solid hsl(var(--border-default));
       
       &:hover {
-        background: ${theme.roles.notice.background};
-        color: ${theme.roles.notice.text};
+        background-color: hsl(var(--surface-quaternary));
+        border-color: hsl(var(--border-hover));
+      }
+    `,
+    outline: css`
+      background-color: transparent;
+      color: hsl(var(--content-primary));
+      border: 1px solid hsl(var(--border-default));
+      
+      &:hover {
+        background-color: hsl(var(--surface-secondary));
+        border-color: hsl(var(--border-hover));
       }
     `,
   };

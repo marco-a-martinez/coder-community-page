@@ -1,16 +1,46 @@
+/* Coder.com inspired design system */
+
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: dark;
-  color: #fafafa;
-  background-color: #09090b;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Content colors */
+  --content-primary: 240 10% 4%;
+  --content-secondary: 240 5% 34%;
+  --content-link: 221 83% 53%;
+  --content-invert: 0 0% 98%;
+  --content-disabled: 240 5% 65%;
+  --content-success: 142 72% 29%;
+  --content-warning: 27 96% 61%;
+  --content-destructive: 0 84% 60%;
+  
+  /* Surface colors */
+  --surface-primary: 0 0% 98%;
+  --surface-secondary: 240 5% 96%;
+  --surface-tertiary: 240 6% 90%;
+  --surface-quaternary: 240 5% 84%;
+  --surface-invert-primary: 240 4% 16%;
+  --surface-invert-secondary: 240 5% 26%;
+  --surface-destructive: 0 93% 94%;
+  --surface-green: 141 79% 85%;
+  --surface-grey: 240 5% 96%;
+  --surface-orange: 34 100% 92%;
+  --surface-sky: 201 94% 86%;
+  --surface-red: 0 93% 94%;
+  --surface-purple: 251 91% 95%;
+  
+  /* Border colors */
+  --border-default: 240 6% 90%;
+  --border-success: 142 76% 36%;
+  --border-warning: 27 96% 61%;
+  --border-destructive: 0 84% 60%;
+  --border-hover: 240 5% 34%;
+  
+  /* Highlight colors */
+  --highlight-purple: 262 83% 58%;
+  --highlight-green: 143 64% 24%;
+  --highlight-grey: 240 5% 65%;
+  --highlight-sky: 201 90% 27%;
+  --highlight-red: 0 74% 42%;
+  
+  --radius: 0.5rem;
 }
 
 * {
@@ -21,9 +51,48 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #09090b;
+  background-color: hsl(var(--surface-primary));
+  color: hsl(var(--content-primary));
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #root {
   min-height: 100vh;
+}
+
+/* Utility classes matching Coder's approach */
+.text-primary {
+  color: hsl(var(--content-primary));
+}
+
+.text-secondary {
+  color: hsl(var(--content-secondary));
+}
+
+.text-link {
+  color: hsl(var(--content-link));
+}
+
+.bg-primary {
+  background-color: hsl(var(--surface-primary));
+}
+
+.bg-secondary {
+  background-color: hsl(var(--surface-secondary));
+}
+
+.bg-tertiary {
+  background-color: hsl(var(--surface-tertiary));
+}
+
+.border-default {
+  border-color: hsl(var(--border-default));
+}
+
+.rounded {
+  border-radius: var(--radius);
 }

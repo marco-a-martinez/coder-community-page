@@ -1,120 +1,82 @@
-// Simplified Coder theme extracted from the main codebase
-export const colors = {
-  black: "#000",
-  white: "#fff",
-  zinc: {
-    50: "#fafafa",
-    100: "#f4f4f5",
-    200: "#e4e4e7",
-    300: "#d4d4d8",
-    400: "#a1a1aa",
-    500: "#71717a",
-    600: "#52525b",
-    700: "#3f3f46",
-    800: "#27272a",
-    900: "#18181b",
-    950: "#09090b",
+// Actual Coder.com design system extracted from their codebase
+// Uses HSL values and CSS custom properties like the real site
+
+export const coderColors = {
+  // Content colors
+  content: {
+    primary: 'hsl(240, 10%, 4%)',
+    secondary: 'hsl(240, 5%, 34%)',
+    link: 'hsl(221, 83%, 53%)',
+    invert: 'hsl(0, 0%, 98%)',
+    disabled: 'hsl(240, 5%, 65%)',
+    success: 'hsl(142, 72%, 29%)',
+    warning: 'hsl(27, 96%, 61%)',
+    destructive: 'hsl(0, 84%, 60%)',
   },
-  orange: {
-    50: "#fff7ed",
-    100: "#ffedd5",
-    200: "#fed7aa",
-    300: "#fdba74",
-    400: "#fb923c",
-    500: "#f97316",
-    600: "#ea580c",
-    700: "#c2410c",
-    800: "#9a3412",
-    900: "#7c2d12",
-    950: "#431407",
+  
+  // Surface colors
+  surface: {
+    primary: 'hsl(0, 0%, 98%)',
+    secondary: 'hsl(240, 5%, 96%)',
+    tertiary: 'hsl(240, 6%, 90%)',
+    quaternary: 'hsl(240, 5%, 84%)',
+    invertPrimary: 'hsl(240, 4%, 16%)',
+    invertSecondary: 'hsl(240, 5%, 26%)',
+    destructive: 'hsl(0, 93%, 94%)',
+    green: 'hsl(141, 79%, 85%)',
+    grey: 'hsl(240, 5%, 96%)',
+    orange: 'hsl(34, 100%, 92%)',
+    sky: 'hsl(201, 94%, 86%)',
+    red: 'hsl(0, 93%, 94%)',
+    purple: 'hsl(251, 91%, 95%)',
   },
-  blue: {
-    50: "#eff6ff",
-    100: "#dbeafe",
-    200: "#bfdbfe",
-    300: "#93c5fd",
-    400: "#60a5fa",
-    500: "#3b82f6",
-    600: "#2563eb",
-    700: "#1d4ed8",
-    800: "#1e40af",
-    900: "#1e3a8a",
-    950: "#172554",
+  
+  // Border colors
+  border: {
+    default: 'hsl(240, 6%, 90%)',
+    success: 'hsl(142, 76%, 36%)',
+    warning: 'hsl(27, 96%, 61%)',
+    destructive: 'hsl(0, 84%, 60%)',
+    hover: 'hsl(240, 5%, 34%)',
   },
-  amber: {
-    50: "#fffbeb",
-    100: "#fef3c7",
-    200: "#fde68a",
-    300: "#fcd34d",
-    400: "#fbbf24",
-    500: "#f59e0b",
-    600: "#d97706",
-    700: "#b45309",
-    800: "#92400e",
-    900: "#78350f",
-    950: "#451a03",
-  },
-  green: {
-    50: "#f0fdf4",
-    100: "#dcfce7",
-    200: "#bbf7d0",
-    300: "#86efac",
-    400: "#4ade80",
-    500: "#22c55e",
-    600: "#16a34a",
-    700: "#15803d",
-    800: "#166534",
-    900: "#14532d",
-    950: "#052e16",
-  },
-  red: {
-    50: "#fef2f2",
-    100: "#fee2e2",
-    200: "#fecaca",
-    300: "#fca5a5",
-    400: "#f87171",
-    500: "#ef4444",
-    600: "#dc2626",
-    700: "#b91c1c",
-    800: "#991b1b",
-    900: "#7f1d1d",
-    950: "#450a0a",
+  
+  // Highlight colors
+  highlight: {
+    purple: 'hsl(262, 83%, 58%)',
+    green: 'hsl(143, 64%, 24%)',
+    grey: 'hsl(240, 5%, 65%)',
+    sky: 'hsl(201, 90%, 27%)',
+    red: 'hsl(0, 74%, 42%)',
   },
 };
 
 export const theme = {
-  palette: {
-    background: {
-      default: colors.zinc[950],
-      paper: colors.zinc[900],
-    },
-    text: {
-      primary: colors.zinc[50],
-      secondary: colors.zinc[300],
-    },
-    divider: colors.zinc[700],
+  colors: coderColors,
+  radius: '0.5rem',
+  spacing: {
+    xs: '0.25rem',
+    sm: '0.5rem',
+    md: '1rem',
+    lg: '1.5rem',
+    xl: '2rem',
+    '2xl': '3rem',
   },
-  roles: {
-    notice: {
-      background: colors.orange[950],
-      outline: colors.orange[500],
-      text: colors.orange[50],
-    },
-    warning: {
-      background: colors.amber[950],
-      outline: colors.amber[300],
-      text: colors.amber[50],
-    },
-    success: {
-      background: colors.green[950],
-      outline: colors.green[500],
-      text: colors.green[50],
-    },
-    info: {
-      background: colors.blue[950],
-      outline: colors.blue[400],
-      text: colors.blue[50],
-    },
+  fontSize: {
+    xs: '0.75rem',
+    sm: '0.875rem',
+    base: '1rem',
+    lg: '1.125rem',
+    xl: '1.25rem',
+    '2xl': '1.5rem',
+    '3xl': '1.875rem',
+    '4xl': '2.25rem',
+    '5xl': '3rem',
+  },
+  fontWeight: {
+    normal: '400',
+    medium: '500',
+    semibold: '600',
+    bold: '700',
   },
 };
 
