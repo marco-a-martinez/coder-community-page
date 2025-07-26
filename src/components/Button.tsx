@@ -6,13 +6,15 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   onClick?: () => void;
+  href?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({ 
   children, 
   variant = 'primary', 
   size = 'md',
-  onClick 
+  onClick,
+  href
 }) => {
   const baseStyles = css`
     border: none;
@@ -85,6 +87,19 @@ export const Button: React.FC<ButtonProps> = ({
       }
     `,
   };
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        css={[baseStyles, sizeStyles[size], variantStyles[variant]]}
+      >
+        {children}
+      </a>
+    );
+  }
 
   return (
     <button

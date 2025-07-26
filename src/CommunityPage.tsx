@@ -36,25 +36,25 @@ const CommunityPage: React.FC = () => {
 						gap: 2rem;
 						align-items: center;
 					`}>
-						<a href="#" css={css`
+						<a href="https://coder.com/docs" target="_blank" rel="noopener noreferrer" css={css`
 							color: hsl(var(--content-secondary));
 							text-decoration: none;
 							font-weight: 500;
 							&:hover { color: hsl(var(--content-primary)); }
 						`}>Docs</a>
-						<a href="#" css={css`
+						<a href="https://coder.com/pricing" target="_blank" rel="noopener noreferrer" css={css`
 							color: hsl(var(--content-secondary));
 							text-decoration: none;
 							font-weight: 500;
 							&:hover { color: hsl(var(--content-primary)); }
 						`}>Pricing</a>
-						<a href="#" css={css`
+						<a href="https://github.com/coder/coder" target="_blank" rel="noopener noreferrer" css={css`
 							color: hsl(var(--content-secondary));
 							text-decoration: none;
 							font-weight: 500;
 							&:hover { color: hsl(var(--content-primary)); }
-						`}>Community</a>
-						<Button variant="primary" size="sm">Get Started</Button>
+						`}>GitHub</a>
+						<Button variant="primary" size="sm" href="https://coder.com/docs/install">Get Started</Button>
 					</nav>
 				</div>
 			</header>
@@ -100,8 +100,8 @@ const CommunityPage: React.FC = () => {
 						justify-content: center;
 						flex-wrap: wrap;
 					`}>
-						<Button variant="primary" size="lg">Install Coder</Button>
-						<Button variant="secondary" size="lg">View Documentation</Button>
+						<Button variant="primary" size="lg" href="https://coder.com/docs/install">Install Coder</Button>
+						<Button variant="secondary" size="lg" href="https://coder.com/docs">View Documentation</Button>
 					</div>
 				</section>
 
@@ -237,7 +237,7 @@ const CommunityPage: React.FC = () => {
 								color: hsl(var(--content-secondary));
 								margin-bottom: 2rem;
 							`}>Install Coder and create your first workspace</p>
-							<Button variant="primary" size="lg">Install Now</Button>
+							<Button variant="primary" size="lg" href="https://coder.com/docs/install">Install Now</Button>
 						</div>
 					</div>
 				</section>
