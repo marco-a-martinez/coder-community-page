@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Coder Community Hub
 
 A beautiful community page for Coder built with React, TypeScript, and Emotion CSS-in-JS, designed to match the official Coder design system.
@@ -97,3 +98,7 @@ Once deployed, your community page will be available at your Vercel URL (e.g., `
 ## 📄 License
 
 This project is open source and available under the MIT License.
+=======
+# coder-community-page
+Description: Community page for Coder built with React
+>>>>>>> a95416abc4d88e6a267336011d231afc37527ca2
