@@ -18,8 +18,8 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   const baseStyles = css`
     border: none;
-    border-radius: var(--radius);
-    font-weight: 500;
+    border-radius: var(--radius-pill); /* Pill shape like Coder brand */
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
     font-family: inherit;
@@ -27,63 +27,77 @@ export const Button: React.FC<ButtonProps> = ({
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    border: 2px solid transparent;
     
     &:hover {
       transform: translateY(-1px);
+      box-shadow: 0 4px 12px hsl(var(--primary-purple) / 0.25);
     }
     
     &:active {
       transform: translateY(0);
     }
+    
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px hsl(var(--primary-purple) / 0.2);
+    }
   `;
 
   const sizeStyles = {
     sm: css`
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.25rem;
       font-size: 0.875rem;
-      height: 2rem;
+      height: 2.25rem;
+      min-width: 5rem;
     `,
     md: css`
-      padding: 0.75rem 1.5rem;
+      padding: 0.75rem 1.75rem;
       font-size: 1rem;
-      height: 2.5rem;
+      height: 2.75rem;
+      min-width: 6rem;
     `,
     lg: css`
-      padding: 1rem 2rem;
+      padding: 1rem 2.25rem;
       font-size: 1.125rem;
-      height: 3rem;
+      height: 3.25rem;
+      min-width: 7rem;
     `,
   };
 
   const variantStyles = {
     primary: css`
-      background-color: hsl(var(--content-primary));
-      color: hsl(var(--content-invert));
-      border: 1px solid hsl(var(--content-primary));
+      background: linear-gradient(135deg, hsl(var(--primary-purple)), hsl(var(--primary-purple-dark)));
+      color: white;
+      border-color: hsl(var(--primary-purple));
       
       &:hover {
-        background-color: hsl(var(--content-secondary));
-        border-color: hsl(var(--content-secondary));
+        background: linear-gradient(135deg, hsl(var(--primary-purple-dark)), hsl(var(--primary-purple)));
+        border-color: hsl(var(--primary-purple-dark));
+        box-shadow: 0 8px 25px hsl(var(--primary-purple) / 0.35);
       }
     `,
     secondary: css`
       background-color: hsl(var(--surface-tertiary));
       color: hsl(var(--content-primary));
-      border: 1px solid hsl(var(--border-default));
+      border-color: hsl(var(--border-default));
       
       &:hover {
         background-color: hsl(var(--surface-quaternary));
         border-color: hsl(var(--border-hover));
+        box-shadow: 0 4px 12px hsl(var(--border-default) / 0.3);
       }
     `,
     outline: css`
       background-color: transparent;
-      color: hsl(var(--content-primary));
-      border: 1px solid hsl(var(--border-default));
+      color: hsl(var(--primary-purple));
+      border-color: hsl(var(--primary-purple));
       
       &:hover {
-        background-color: hsl(var(--surface-secondary));
-        border-color: hsl(var(--border-hover));
+        background-color: hsl(var(--surface-purple));
+        border-color: hsl(var(--primary-purple-dark));
+        color: hsl(var(--primary-purple-dark));
+        box-shadow: 0 4px 12px hsl(var(--primary-purple) / 0.2);
       }
     `,
   };
