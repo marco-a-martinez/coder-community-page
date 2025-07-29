@@ -27,7 +27,7 @@ const CommunityPage: React.FC = () => {
 					<div css={css`
 						font-size: 1.5rem;
 						font-weight: 700;
-						color: hsl(var(--primary-purple));
+						color: hsl(var(--content-link));
 					`}>
 						Coder
 					</div>
@@ -204,7 +204,7 @@ const CommunityPage: React.FC = () => {
 											width: 2rem;
 											height: 2rem;
 											border-radius: 50%;
-											background-color: hsl(var(--primary-purple));
+											background-color: hsl(var(--content-link));
 											color: white;
 											display: flex;
 											align-items: center;
@@ -261,7 +261,7 @@ const CommunityPage: React.FC = () => {
 					`}>
 						{[
 							{ name: "Discord", desc: "Chat with developers and get real-time help", color: "var(--surface-purple)" },
-							{ name: "GitHub", desc: "Contribute to the project and report issues", color: "var(--surface-purple-accent)" },
+							{ name: "GitHub", desc: "Contribute to the project and report issues", color: "var(--surface-sky)" },
 							{ name: "Discussions", desc: "Share ideas and best practices", color: "var(--surface-purple)" },
 						].map((platform, index) => (
 							<div key={index} css={css`

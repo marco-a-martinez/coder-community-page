@@ -1,19 +1,19 @@
-// Official Coder.com design system based on brand guidelines
-// Updated to match coder.com/cde and brand guidelines
+// Official Coder.com design system - EXACT match from coder/coder repository
+// Colors extracted from /site/src/index.css in the official Coder codebase
 
 export const coderColors = {
-  // Primary brand colors from Coder brand guidelines
+  // Primary brand colors - Official Coder uses BLUE for links, not purple
   primary: {
-    purple: 'hsl(262, 83%, 58%)', // Main Coder purple
-    purpleDark: 'hsl(262, 83%, 48%)',
-    purpleLight: 'hsl(262, 83%, 68%)',
+    blue: 'hsl(221, 83%, 53%)', // Official Coder link color (light theme)
+    blueDark: 'hsl(213, 94%, 68%)', // Official Coder link color (dark theme)
+    blueLight: 'hsl(221, 83%, 68%)',
   },
   
-  // Content colors - updated for modern look
+  // Content colors - EXACT match from official Coder
   content: {
     primary: 'hsl(240, 10%, 4%)',
     secondary: 'hsl(240, 5%, 34%)',
-    link: 'hsl(262, 83%, 58%)', // Using brand purple for links
+    link: 'hsl(221, 83%, 53%)', // Official Coder blue, NOT purple!
     invert: 'hsl(0, 0%, 98%)',
     disabled: 'hsl(240, 5%, 65%)',
     success: 'hsl(142, 72%, 29%)',
@@ -21,42 +21,39 @@ export const coderColors = {
     destructive: 'hsl(0, 84%, 60%)',
   },
   
-  // Surface colors - softer, more modern
+  // Surface colors - EXACT match from official Coder
   surface: {
-    primary: 'hsl(0, 0%, 100%)', // Pure white
-    secondary: 'hsl(240, 5%, 98%)', // Very light gray
-    tertiary: 'hsl(240, 6%, 95%)', // Light gray
-    quaternary: 'hsl(240, 5%, 90%)', // Medium light gray
+    primary: 'hsl(0, 0%, 98%)', // Official Coder surface-primary
+    secondary: 'hsl(240, 5%, 96%)', // Official Coder surface-secondary
+    tertiary: 'hsl(240, 6%, 90%)', // Official Coder surface-tertiary
+    quaternary: 'hsl(240, 5%, 84%)', // Official Coder surface-quaternary
     invertPrimary: 'hsl(240, 4%, 16%)',
     invertSecondary: 'hsl(240, 5%, 26%)',
-    destructive: 'hsl(0, 93%, 97%)',
-    green: 'hsl(141, 79%, 95%)',
-    grey: 'hsl(240, 5%, 98%)',
-    orange: 'hsl(34, 100%, 97%)',
-    sky: 'hsl(201, 94%, 95%)',
-    red: 'hsl(0, 93%, 97%)',
-    purple: 'hsl(262, 83%, 97%)', // Very light purple
-    purpleAccent: 'hsl(262, 83%, 95%)', // Light purple accent
+    destructive: 'hsl(0, 93%, 94%)', // Official Coder surface-destructive
+    green: 'hsl(141, 79%, 85%)', // Official Coder surface-green
+    grey: 'hsl(240, 5%, 96%)', // Official Coder surface-grey
+    orange: 'hsl(34, 100%, 92%)', // Official Coder surface-orange
+    sky: 'hsl(201, 94%, 86%)', // Official Coder surface-sky
+    red: 'hsl(0, 93%, 94%)', // Official Coder surface-red
+    purple: 'hsl(251, 91%, 95%)', // Official Coder surface-purple
   },
   
-  // Border colors - softer
+  // Border colors - EXACT match from official Coder
   border: {
-    default: 'hsl(240, 6%, 92%)',
+    default: 'hsl(240, 6%, 90%)', // Official Coder border-default
     success: 'hsl(142, 76%, 36%)',
     warning: 'hsl(27, 96%, 61%)',
     destructive: 'hsl(0, 84%, 60%)',
     hover: 'hsl(240, 5%, 34%)',
-    purple: 'hsl(262, 83%, 85%)', // Purple border
   },
   
-  // Highlight colors - brand focused
+  // Highlight colors - EXACT match from official Coder
   highlight: {
-    purple: 'hsl(262, 83%, 58%)', // Main brand purple
-    purpleLight: 'hsl(262, 83%, 95%)',
-    green: 'hsl(143, 64%, 24%)',
-    grey: 'hsl(240, 5%, 65%)',
-    sky: 'hsl(201, 90%, 27%)',
-    red: 'hsl(0, 74%, 42%)',
+    purple: 'hsl(262, 83%, 58%)', // Official Coder highlight-purple
+    green: 'hsl(143, 64%, 24%)', // Official Coder highlight-green
+    grey: 'hsl(240, 5%, 65%)', // Official Coder highlight-grey
+    sky: 'hsl(201, 90%, 27%)', // Official Coder highlight-sky
+    red: 'hsl(0, 74%, 42%)', // Official Coder highlight-red
   },
 };
 

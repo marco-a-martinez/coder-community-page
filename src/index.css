@@ -1,48 +1,46 @@
-/* Official Coder.com design system - updated to match brand guidelines */
+/* Official Coder.com design system - EXACT MATCH from coder/coder repository */
+/* Colors extracted from /site/src/index.css in the official Coder codebase */
 
 :root {
-  /* Primary brand colors */
-  --primary-purple: 262 83% 58%;
-  --primary-purple-dark: 262 83% 48%;
-  --primary-purple-light: 262 83% 68%;
+  /* Primary brand colors - Official Coder uses BLUE for links, not purple */
+  --primary-blue: 221 83% 53%;
+  --primary-blue-dark: 213 94% 68%;
+  --primary-blue-light: 221 83% 68%;
   
-  /* Content colors */
+  /* Content colors - EXACT match from official Coder */
   --content-primary: 240 10% 4%;
   --content-secondary: 240 5% 34%;
-  --content-link: 262 83% 58%;
+  --content-link: 221 83% 53%;  /* Official Coder blue, NOT purple! */
   --content-invert: 0 0% 98%;
   --content-disabled: 240 5% 65%;
   --content-success: 142 72% 29%;
   --content-warning: 27 96% 61%;
   --content-destructive: 0 84% 60%;
   
-  /* Surface colors - softer, more modern */
-  --surface-primary: 0 0% 100%;
-  --surface-secondary: 240 5% 98%;
-  --surface-tertiary: 240 6% 95%;
-  --surface-quaternary: 240 5% 90%;
+  /* Surface colors - EXACT match from official Coder */
+  --surface-primary: 0 0% 98%;
+  --surface-secondary: 240 5% 96%;
+  --surface-tertiary: 240 6% 90%;
+  --surface-quaternary: 240 5% 84%;
   --surface-invert-primary: 240 4% 16%;
   --surface-invert-secondary: 240 5% 26%;
-  --surface-destructive: 0 93% 97%;
-  --surface-green: 141 79% 95%;
-  --surface-grey: 240 5% 98%;
-  --surface-orange: 34 100% 97%;
-  --surface-sky: 201 94% 95%;
-  --surface-red: 0 93% 97%;
-  --surface-purple: 262 83% 97%;
-  --surface-purple-accent: 262 83% 95%;
+  --surface-destructive: 0 93% 94%;
+  --surface-green: 141 79% 85%;
+  --surface-grey: 240 5% 96%;
+  --surface-orange: 34 100% 92%;
+  --surface-sky: 201 94% 86%;
+  --surface-red: 0 93% 94%;
+  --surface-purple: 251 91% 95%;
   
-  /* Border colors */
-  --border-default: 240 6% 92%;
+  /* Border colors - EXACT match from official Coder */
+  --border-default: 240 6% 90%;
   --border-success: 142 76% 36%;
   --border-warning: 27 96% 61%;
   --border-destructive: 0 84% 60%;
   --border-hover: 240 5% 34%;
-  --border-purple: 262 83% 85%;
   
-  /* Highlight colors */
+  /* Highlight colors - EXACT match from official Coder */
   --highlight-purple: 262 83% 58%;
-  --highlight-purple-light: 262 83% 95%;
   --highlight-green: 143 64% 24%;
   --highlight-grey: 240 5% 65%;
   --highlight-sky: 201 90% 27%;
@@ -66,8 +64,7 @@ body {
   min-height: 100vh;
   background-color: hsl(var(--surface-primary));
   color: hsl(var(--content-primary));
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  line-height: 1.5;
+  font-family: "Inter Variable", system-ui, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -90,8 +87,8 @@ body {
   color: hsl(var(--content-link));
 }
 
-.text-purple {
-  color: hsl(var(--primary-purple));
+.text-blue {
+  color: hsl(var(--primary-blue));
 }
 
 .bg-primary {
@@ -114,9 +111,7 @@ body {
   border-color: hsl(var(--border-default));
 }
 
-.border-purple {
-  border-color: hsl(var(--border-purple));
-}
+
 
 .rounded {
   border-radius: var(--radius-md);
