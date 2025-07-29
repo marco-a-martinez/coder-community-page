@@ -81,18 +81,18 @@ const CommunityPage: React.FC = () => {
 							font-size: 2rem;
 						}
 					`}>
-						Coder Community Hub
+						Built for developers. Ready for their agents.
 					</h1>
 					<p css={css`
 						font-size: 1.25rem;
 						color: hsl(var(--content-secondary));
 						margin-bottom: 2rem;
-						max-width: 600px;
+						max-width: 700px;
 						margin-left: auto;
 						margin-right: auto;
 						line-height: 1.6;
 					`}>
-						Join thousands of developers building the future of remote development
+						Coder is an open-source platform where developers and AI agents collaborate securely in self-hosted environments on your infrastructure.
 					</p>
 					<div css={css`
 						display: flex;
@@ -100,8 +100,8 @@ const CommunityPage: React.FC = () => {
 						justify-content: center;
 						flex-wrap: wrap;
 					`}>
-						<Button variant="primary" size="lg" href="https://coder.com/docs/install">Install Coder</Button>
-						<Button variant="secondary" size="lg" href="https://coder.com/docs">View Documentation</Button>
+						<Button variant="primary" size="lg" href="https://coder.com/docs/install">Deploy Coder</Button>
+						<Button variant="secondary" size="lg" href="https://coder.com/docs">Read the Docs</Button>
 					</div>
 				</section>
 
@@ -114,19 +114,26 @@ const CommunityPage: React.FC = () => {
 						font-size: 2.5rem;
 						font-weight: 700;
 						text-align: center;
-						margin-bottom: 3rem;
+						margin-bottom: 1rem;
 						color: hsl(var(--content-primary));
-					`}>Why Choose Coder?</h2>
+					`}>More productive, from day one.</h2>
+					<p css={css`
+						font-size: 1.125rem;
+						color: hsl(var(--content-secondary));
+						text-align: center;
+						margin-bottom: 3rem;
+						max-width: 600px;
+						margin-left: auto;
+						margin-right: auto;
+					`}>We believe developer productivity, code security, and infrastructure cost control can coexist—and Coder makes it possible.</p>
 					<div css={css`
 						display: grid;
 						grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 						gap: 2rem;
 					`}>
 						{[
-							{ title: "Deploy Anywhere", desc: "Run on any cloud, on-premises, or hybrid infrastructure" },
-							{ title: "Bring Any IDE", desc: "Use VS Code, JetBrains, Vim, or any editor you prefer" },
-							{ title: "Scale AI Agents", desc: "Integrate AI coding assistants and scale development workflows" },
-							{ title: "Enterprise Ready", desc: "Built for security, compliance, and enterprise-scale deployments" },
+							{ title: "Secure source code", desc: "Move source code and data off decentralized laptops into development environments on your secure and compliant infrastructure." },
+							{ title: "Optimize compute costs", desc: "Automatically right-size developer infrastructure, share resources, and stop paying for idle development environments." },
 						].map((feature, index) => (
 							<div key={index} css={css`
 								padding: 2rem;
@@ -157,6 +164,71 @@ const CommunityPage: React.FC = () => {
 					</div>
 				</section>
 
+				{/* Fits your flow Section */}
+				<section css={css`
+					padding: 4rem 0;
+					border-top: 1px solid hsl(var(--border-default));
+				`}>
+					<h2 css={css`
+						font-size: 2.5rem;
+						font-weight: 700;
+						text-align: center;
+						margin-bottom: 1rem;
+						color: hsl(var(--content-primary));
+					`}>Fits your flow. Scales as you grow.</h2>
+					<p css={css`
+						font-size: 1.125rem;
+						color: hsl(var(--content-secondary));
+						text-align: center;
+						margin-bottom: 3rem;
+						max-width: 600px;
+						margin-left: auto;
+						margin-right: auto;
+					`}>Whether you're a team of 1 or 10,000, Coder adapts to the way you work with the stack you already use, not the other way around.</p>
+					<div css={css`
+						display: grid;
+						grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+						gap: 2rem;
+					`}>
+						{[
+							{ title: "Deploy anywhere", desc: "Deploy Coder on your infrastructure, in any cloud or fully air-gapped on-premises, to maintain complete control.", href: "https://coder.com/docs/install/cloud" },
+							{ title: "Bring any IDE", desc: "Use any web-based or desktop IDE — VS Code, JetBrains, Cursor, Jupyter. Coder maintains official plugins for VS Code and JetBrains.", href: "https://coder.com/docs/user-guides/workspace-access" },
+							{ title: "Run popular OS's", desc: "Work across Mac, Linux, and Windows — Coder supports the tools and operating systems your projects require.", href: "https://registry.coder.com/templates" },
+							{ title: "Scale AI coding agents", desc: "Coder gives you the control to run any AI coding agent — on your infrastructure, alongside your developers, at scale.", href: "https://coder.com/docs/ai-coder" },
+							{ title: "Integrate your stack", desc: "Bring your existing identity provider, container registry, observability tools, and Terraform infrastructure — no lock-in required.", href: "https://registry.coder.com/modules" },
+						].map((feature, index) => (
+							<a key={index} href={feature.href} target="_blank" rel="noopener noreferrer" css={css`
+								padding: 2rem;
+								border: 1px solid hsl(var(--border-default));
+								border-radius: var(--radius);
+								background-color: hsl(var(--surface-secondary));
+								transition: all 0.2s ease;
+								text-decoration: none;
+								color: inherit;
+								display: block;
+								
+								&:hover {
+									border-color: hsl(var(--content-link));
+									transform: translateY(-2px);
+									box-shadow: 0 4px 12px hsl(var(--border-default) / 0.15);
+								}
+							`}>
+								<h3 css={css`
+									font-size: 1.25rem;
+									font-weight: 600;
+									margin-bottom: 0.5rem;
+									color: hsl(var(--content-primary));
+								`}>{feature.title}</h3>
+								<p css={css`
+									color: hsl(var(--content-secondary));
+									margin: 0;
+									line-height: 1.6;
+								`}>{feature.desc}</p>
+							</a>
+						))}
+					</div>
+				</section>
+
 				{/* Get Started Section */}
 				<section css={css`
 					padding: 4rem 0;
@@ -179,14 +251,14 @@ const CommunityPage: React.FC = () => {
 								font-weight: 700;
 								margin-bottom: 1rem;
 								color: hsl(var(--content-primary));
-							`}>Get Started with Coder</h2>
+							`}>No more "works on my machine".</h2>
 							<p css={css`
 								font-size: 1.125rem;
 								color: hsl(var(--content-secondary));
 								margin-bottom: 2rem;
 								line-height: 1.6;
 							`}>
-								Set up your development environment in minutes with our step-by-step guide.
+								Standardize and shift development from laptops to your infrastructure — without sacrificing the tools, speed, or experience developers and coding agents need.
 							</p>
 							<Stack spacing={3}>
 								{[
