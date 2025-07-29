@@ -31,7 +31,7 @@ export const Button: React.FC<ButtonProps> = ({
     
     &:hover {
       transform: translateY(-1px);
-      box-shadow: 0 4px 12px hsl(var(--primary-purple) / 0.25);
+      box-shadow: 0 4px 12px hsl(var(--content-link) / 0.25);
     }
     
     &:active {
@@ -40,7 +40,7 @@ export const Button: React.FC<ButtonProps> = ({
     
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 3px hsl(var(--primary-purple) / 0.2);
+      box-shadow: 0 0 0 3px hsl(var(--content-link) / 0.2);
     }
   `;
 
@@ -67,14 +67,14 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantStyles = {
     primary: css`
-      background: linear-gradient(135deg, hsl(var(--primary-purple)), hsl(var(--primary-purple-dark)));
+      background: linear-gradient(135deg, hsl(var(--content-link)), hsl(var(--primary-blue-dark)));
       color: white;
-      border-color: hsl(var(--primary-purple));
+      border-color: hsl(var(--content-link));
       
       &:hover {
-        background: linear-gradient(135deg, hsl(var(--primary-purple-dark)), hsl(var(--primary-purple)));
-        border-color: hsl(var(--primary-purple-dark));
-        box-shadow: 0 8px 25px hsl(var(--primary-purple) / 0.35);
+        background: linear-gradient(135deg, hsl(var(--primary-blue-dark)), hsl(var(--content-link)));
+        border-color: hsl(var(--primary-blue-dark));
+        box-shadow: 0 8px 25px hsl(var(--content-link) / 0.35);
       }
     `,
     secondary: css`
@@ -90,14 +90,14 @@ export const Button: React.FC<ButtonProps> = ({
     `,
     outline: css`
       background-color: transparent;
-      color: hsl(var(--primary-purple));
-      border-color: hsl(var(--primary-purple));
+      color: hsl(var(--content-link));
+      border-color: hsl(var(--content-link));
       
       &:hover {
         background-color: hsl(var(--surface-purple));
-        border-color: hsl(var(--primary-purple-dark));
-        color: hsl(var(--primary-purple-dark));
-        box-shadow: 0 4px 12px hsl(var(--primary-purple) / 0.2);
+        border-color: hsl(var(--primary-blue-dark));
+        color: hsl(var(--primary-blue-dark));
+        box-shadow: 0 4px 12px hsl(var(--content-link) / 0.2);
       }
     `,
   };

@@ -4,7 +4,7 @@
 :root {
   /* Primary brand colors - Official Coder uses BLUE for links, not purple */
   --primary-blue: 221 83% 53%;
-  --primary-blue-dark: 213 94% 68%;
+  --primary-blue-dark: 221 83% 43%;
   --primary-blue-light: 221 83% 68%;
   
   /* Content colors - EXACT match from official Coder */
