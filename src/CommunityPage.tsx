@@ -7,15 +7,14 @@ const CommunityPage: React.FC = () => {
 	return (
 		<div css={css`
 			min-height: 100vh;
-			background-color: hsl(var(--surface-primary));
-			color: hsl(var(--content-primary));
+			background: linear-gradient(135deg, #4c1d95 0%, #581c87 25%, #6b21a8 50%, #7c3aed 75%, #8b5cf6 100%);
+			color: white;
 			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 		`}>
 			{/* Header */}
 			<header css={css`
 				padding: 1rem 2rem;
-				border-bottom: 1px solid hsl(var(--border-default));
-				background-color: hsl(var(--surface-primary));
+				background: transparent;
 			`}>
 				<div css={css`
 					max-width: 1200px;
@@ -81,7 +80,7 @@ const CommunityPage: React.FC = () => {
 							font-size: 2rem;
 						}
 					`}>
-						Built for developers. Ready for their agents.
+						Coder Community Hub
 					</h1>
 					<p css={css`
 						font-size: 1.25rem;
@@ -92,7 +91,8 @@ const CommunityPage: React.FC = () => {
 						margin-right: auto;
 						line-height: 1.6;
 					`}>
-						Coder is an open-source platform where developers and AI agents collaborate securely in self-hosted environments on your infrastructure.
+						Join thousands of developers
+						building the future of remote development
 					</p>
 					<div css={css`
 						display: flex;
@@ -100,8 +100,9 @@ const CommunityPage: React.FC = () => {
 						justify-content: center;
 						flex-wrap: wrap;
 					`}>
-						<Button variant="primary" size="lg" href="https://coder.com/docs/install">Deploy Coder</Button>
-						<Button variant="secondary" size="lg" href="https://coder.com/docs">Read the Docs</Button>
+						<Button variant="primary" size="lg" href="https://coder.com/docs/install">Install Coder Community Edition</Button>
+						<Button variant="secondary" size="lg" href="https://discord.gg/coder">Join The Coder Community</Button>
+						<Button variant="secondary" size="lg" href="https://github.com/coder/coder">Explore The Coder GitHub</Button>
 					</div>
 				</section>
 
